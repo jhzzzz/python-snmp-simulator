@@ -11,12 +11,17 @@ python SNMP 协议模拟器，可基于任意 MIB 库文件进行设备的模拟
 注：以下以CentOS7.0为例进行安装，如果是其他版本Linux，步骤基本相似，Python请先升级至2.7。
 
 安装 pip
+
 > \# curl -O https://bootstrap.pypa.io/get-pip.py
+
 > \# python get-pip.py
 
 安装依赖包
+
 > \# yum install gcc #依赖gcc编译
+
 > \# yum install python-devel
+
 > \# pip install pysnmp
 
 pysnmp 默认安装 pysmi 依赖库有些bug，我们卸载掉，并用最新的重新安装：
