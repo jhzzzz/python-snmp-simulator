@@ -1,0 +1,1 @@
+python hwsim.py -p 163 -d HUAWEI-SERVER-IBMC-MIB

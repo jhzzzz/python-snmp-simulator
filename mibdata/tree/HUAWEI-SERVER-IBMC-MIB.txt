@@ -1,0 +1,1698 @@
++--huawei(2011)
+   |
+   +--products(2)
+      |
+      +--hwServer(235)
+         |
+         +--hwBMC(1)
+            |
+            +--hwiBMC(1)
+               |
+               +--system(1)
+               |  |
+               |  +-- -R-- EnumVal   systemHealth(1)
+               |  |        Values: ok(1), minor(2), major(3), critical(4)
+               
+               |  +-- -RW- EnumVal   systemBootsequence(2)
+               |  |        Values: noOverride(1), pxe(2), hdd(3), cdDvd(4), floppyPrimaryRemovableMedia(5), unspecified(6), biossetup(7)
+               
+               |  +-- -R-- String    systemTime(3)
+               |  |        Textual Convention: DisplayString
+               
+               |  +-- -RW- Integer32 systemTimeZone(4)
+               |  |        Range: -720..780
+               
+               |  +-- -RW- Integer32 safepowerofftime(5)
+               
+               |  +-- -R-- String    deviceName(6)
+               |  |        Textual Convention: DisplayString
+               
+               |  +-- -R-- String    deviceSerialNo(7)
+               |  |        Textual Convention: DisplayString
+               
+               |  +-- -RW- EnumVal   powerOnPolicy(8)
+               |  |        Values: stayoff(1), restorePreviousState(2), turnon(3)
+               
+               |  +-- -RW- String    hostName(9)
+               |  |        Textual Convention: DisplayString
+               
+               |  +-- -R-- String    systemGuid(10)
+               |  |        Textual Convention: DisplayString
+               
+               |  +-- -RW- String    identify(11)
+               |  |        Textual Convention: DisplayString
+               
+               |  +-- -RW- EnumVal   systemPowerState(12)
+               |  |        Values: normalPowerOff(1), powerOn(2), forcedSystemReset(3), forcedPowerCycle(4), forcedPowerOff(5)
+               
+               |  +-- -R-- INTEGER   presentSystemPower(13)
+               |  +-- -R-- String    deviceOwnerID(14)
+               |  |        Textual Convention: DisplayString
+               
+               |  +-- -R-- String    deviceslotID(15)
+               |  |        Textual Convention: DisplayString
+               
+               |  +-- -RW- String    remoteOEMInfo(16)
+               |  |        Textual Convention: DisplayString
+               
+               |  +-- -RW- String    deviceLocationInfo(17)
+               |  |        Textual Convention: DisplayString
+               
+               |  +-- -RW- String    deviceRemoteManageID(18)
+               |  |        Textual Convention: DisplayString
+               
+               |  +-- -RW- EnumVal   bmcReboot(19)
+               |  |        Values: reboot(1)
+               
+               |  +-- -RW- EnumVal   powerOnPermit(20)
+               |  |        Values: notPermit(1), permit(2)
+               
+               |  +-- -RW- EnumVal   autoDiscoveryEnable(21)
+               |  |        Values: disable(1), enable(2)
+               
+               |  +-- -R-- String    productUniqueID(22)
+               |  |        Textual Convention: DisplayString
+               
+               |  +-- -R-- INTEGER   systemCpuUsage(23)
+               |  +-- -RW- EnumVal   systemBootOnce(24)
+               |  |        Values: once(1), permanent(2)
+               |  |
+               |  +--systemHealthEventDescriptionTable(50)
+               |     |
+               |     +--systemHealthEventDescriptionEntry(1)
+               |        |  Index: eventIndex
+               |        |
+               |        +-- ---- INTEGER   eventIndex(1)
+               |        +-- -R-- String    eventSensorName(2)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    eventAlertTime(3)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- EnumVal   eventAlertSeverity(4)
+               |        |        Values: ok(1), minor(2), major(3), critical(4)
+               |        +-- -R-- String    eventDescription(5)
+               |                 Textual Convention: DisplayString
+               |
+               +--domainNameSystem(2)
+               |  |
+               |  +-- -RW- String    domainName(1)
+               |  |        Textual Convention: DisplayString
+               
+               |  +-- -RW- String    preferredDNSServer(2)
+               |  |        Textual Convention: DisplayString
+               
+               |  +-- -RW- String    alternateDNSServer(3)
+               |  |        Textual Convention: DisplayString
+               
+               |  +-- -RW- EnumVal   dnsSource(4)
+               |  |        Values: manual(1), auto(2)
+               
+               |  +-- -RW- EnumVal   bindNetPort(5)
+               |  |        Values: eth0(1), eth1(2)
+               
+               |  +-- -RW- EnumVal   bindIPProtocol(6)
+               |           Values: ipv4(1), ipv6(2)
+               |
+               +--ldap(3)
+               |  |
+               |  +-- -RW- EnumVal   ldapEnable(1)
+               |  |        Values: disable(1), enable(2)
+               |  +-- -RW- String    ldapDomainServer(2)
+               |  |        Textual Convention: DisplayString
+               |  +-- -RW- String    ldapUserDomain(3)
+               |  |        Textual Convention: DisplayString
+               |  +-- -RW- INTEGER   ldapPort(4)
+               |  +-- -RW- String    ldapDomainServer2(5)
+               |  |        Textual Convention: DisplayString
+               |  +-- -RW- String    ldapUserDomain2(6)
+               |  |        Textual Convention: DisplayString
+               |  +-- -RW- INTEGER   ldapPort2(7)
+               |  +-- -RW- String    ldapDomainServer3(8)
+               |  |        Textual Convention: DisplayString
+               |  +-- -RW- String    ldapUserDomain3(9)
+               |  |        Textual Convention: DisplayString
+               |  +-- -RW- INTEGER   ldapPort3(10)
+               |  |
+               |  +--ldapGroupInfoDescription1Table(50)
+               |  |  |
+               |  |  +--ldapGroupInfoDescription1Entry(1)
+               |  |     |  Index: groupIndex
+               |  |     |
+               |  |     +-- ---- INTEGER   groupIndex(1)
+               |  |     +-- -RW- String    groupName(2)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -RW- String    groupDomain(3)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -RW- EnumVal   groupPrivilege(4)
+               |  |     |        Values: commonUser(1), operator(2), administrator(3), customRole1(4), customRole2(5), customRole3(6), customRole4(7)
+               |  |     +-- -RW- INTEGER   groupInterfaces(5)
+               |  |
+               |  +--ldapGroupInfoDescription2Table(51)
+               |  |  |
+               |  |  +--ldapGroupInfoDescription2Entry(1)
+               |  |     |  Index: groupIndex2
+               |  |     |
+               |  |     +-- ---- INTEGER   groupIndex2(1)
+               |  |     +-- -RW- String    groupName2(2)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -RW- EnumVal   groupPrivilege2(3)
+               |  |     |        Values: commonUser(1), operator(2), administrator(3), customRole1(4), customRole2(5), customRole3(6), customRole4(7)
+               |  |     +-- -RW- INTEGER   groupInterfaces2(4)
+               |  |     +-- -RW- String    groupDomain2(5)
+               |  |              Textual Convention: DisplayString
+               |  |
+               |  +--ldapGroupInfoDescription3Table(52)
+               |     |
+               |     +--ldapGroupInfoDescription3Entry(1)
+               |        |  Index: groupIndex3
+               |        |
+               |        +-- ---- INTEGER   groupIndex3(1)
+               |        +-- -RW- String    groupName3(2)
+               |        |        Textual Convention: DisplayString
+               |        +-- -RW- EnumVal   groupPrivilege3(3)
+               |        |        Values: commonUser(1), operator(2), administrator(3), customRole1(4), customRole2(5), customRole3(6), customRole4(7)
+               |        +-- -RW- INTEGER   groupInterfaces3(4)
+               |        +-- -RW- String    groupDomain3(5)
+               |                 Textual Convention: DisplayString
+               |
+               +--trap(4)
+               |  |
+               |  +-- -RW- EnumVal   trapEnable(1)
+               |  |        Values: disable(1), enable(2)
+               |  +-- -RW- String    trapCommunity(2)
+               |  |        Textual Convention: DisplayString
+               |  +-- -RW- EnumVal   trapLevel(3)
+               |  |        Values: ok(1), minor(2), major(3), critical(4)
+               |  +-- -RW- EnumVal   trapMode(4)
+               |  |        Values: eventCodeMode(1), trapOidMode(2)
+               |  +-- -RW- EnumVal   trapVersion(5)
+               |  |        Values: v1(1), v2c(2), v3(3)
+               |  +-- -RW- EnumVal   trapRearm(6)
+               |  |        Values: rearm(1)
+               |  +-- -RW- EnumVal   trapServerIdentity(7)
+               |  |        Values: boardSN(1), productAssetTag(2), hostName(3)
+               |  +-- -RW- String    trapSecurityUserName(8)
+               |  |        Textual Convention: DisplayString
+               |  +-- -RW- String    trapLevelDetail(9)
+               |  |        Textual Convention: DisplayString
+               |  |
+               |  +--trapInfoDescriptionTable(50)
+               |     |
+               |     +--trapInfoDescriptionEntry(1)
+               |        |  Index: trapReceiverIndex
+               |        |
+               |        +-- ---- INTEGER   trapReceiverIndex(1)
+               |        +-- -RW- EnumVal   trapReceiverEnable(2)
+               |        |        Values: disable(1), enable(2)
+               |        +-- -RW- String    trapReceiverAddress(3)
+               |        |        Textual Convention: DisplayString
+               |        +-- -RW- INTEGER   trapReceiverPort(4)
+               |        +-- -RW- EnumVal   trapSendType(5)
+               |        |        Values: snmpTrap(1)
+               |        +-- -RW- INTEGER   trapTest(6)
+               |
+               +--smtp(5)
+               |  |
+               |  +-- -RW- EnumVal   smtpEnable(1)
+               |  |        Values: disable(1), enable(2)
+               |  +-- -RW- EnumVal   smtpSendSeverity(2)
+               |  |        Values: ok(1), minor(2), major(3), critical(4)
+               |  +-- -RW- String    smtpServerIP(3)
+               |  |        Textual Convention: DisplayString
+               |  +-- -RW- EnumVal   smtpLoginType(4)
+               |  |        Values: anonymous(1), account(2)
+               |  +-- -RW- String    smtpLoginAccount(5)
+               |  |        Textual Convention: DisplayString
+               |  +-- -RW- String    smtpLoginPassword(6)
+               |  |        Textual Convention: DisplayString
+               |  +-- -RW- String    smtpSendFrom(7)
+               |  |        Textual Convention: DisplayString
+               |  +-- -RW- EnumVal   smtpTLSEnable(8)
+               |  |        Values: disable(1), enable(2)
+               |  +-- -RW- String    smtpSendSeverityDetail(9)
+               |  |        Textual Convention: DisplayString
+               |  |
+               |  +--smtpReceiverDescriptionTable(50)
+               |     |
+               |     +--smtpReceiverDescriptionEntry(1)
+               |        |  Index: smtpReceiverIndex
+               |        |
+               |        +-- ---- INTEGER   smtpReceiverIndex(1)
+               |        +-- -RW- EnumVal   smtpReceiverState(2)
+               |        |        Values: disable(1), enable(2)
+               |        +-- -RW- String    smtpReceiverAddress(3)
+               |        |        Textual Convention: DisplayString
+               |        +-- -RW- String    smtpReceiverDescription(4)
+               |        |        Textual Convention: DisplayString
+               |        +-- -RW- INTEGER   smtpReceiverTest(5)
+               |
+               +--powerSupplyInfo(6)
+               |  |
+               |  +-- -R-- EnumVal   powerSupplyEntireStatus(1)
+               |  |        Values: ok(1), minor(2), major(3), critical(4), absence(5), unknown(6)
+               |  +-- -RW- EnumVal   settedPowerSupplyEntireMode(2)
+               |  |        Values: loadBalance(1), activeStandby(2), unsupport(3)
+               |  +-- -R-- EnumVal   actualPowerSupplyEntireMode(3)
+               |  |        Values: loadBalance(1), activeStandby(2), unknown(3)
+               |  +-- -RW- INTEGER   settedActivePowerSupply(4)
+               |  |
+               |  +--powerSupplyDescriptionTable(50)
+               |     |
+               |     +--powerSupplyDescriptionEntry(1)
+               |        |  Index: powerSupplyIndex
+               |        |
+               |        +-- ---- INTEGER   powerSupplyIndex(1)
+               |        +-- -R-- String    powerSupplymanufacture(2)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- EnumVal   powerSupplyInputMode(3)
+               |        |        Values: acInput(1), dcInput(2), acInputDcInput(3)
+               |        +-- -R-- String    powerSupplyModel(4)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    powerSupplyVersion(5)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- INTEGER   powerSupplyPowerRating(6)
+               |        +-- -R-- EnumVal   powerSupplyStatus(7)
+               |        |        Values: ok(1), minor(2), major(3), critical(4), absence(5), unknown(6)
+               |        +-- -R-- INTEGER   powerSupplyInputPower(8)
+               |        +-- -R-- EnumVal   powerSupplyPresence(9)
+               |        |        Values: absence(1), presence(2), unknown(3)
+               |        +-- -R-- EnumVal   powerSupplyProtocol(10)
+               |        |        Values: psmi(1), pmbus(2)
+               |        +-- -R-- String    powerSupplyLocation(11)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    powerSupplyFunction(12)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    powerSupplyDevicename(13)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- EnumVal   powerSupplyWorkMode(14)
+               |                 Values: active(1), backup(2), unknown(3)
+               |
+               +--fruPowerProperty(7)
+               |  |
+               |  +--fruPowerDescriptionTable(50)
+               |     |
+               |     +--fruPowerDescriptionEntry(1)
+               |        |  Index: fruNum
+               |        |
+               |        +-- ---- INTEGER   fruNum(1)
+               |        +-- -RW- EnumVal   fruPowerControl(2)
+               |                 Values: normalPowerOff(1), powerOn(2), forcedSystemReset(3), forcedPowerCycle(4)
+               |
+               +--fanProperty(8)
+               |  |
+               |  +-- -RW- String    fanMode(1)
+               |  |        Textual Convention: DisplayString
+               |  +-- -RW- INTEGER   fanLevel(2)
+               |  +-- -R-- EnumVal   fanEntireStatus(3)
+               |  |        Values: ok(1), minor(2), major(3), critical(4), absence(5), unknown(6)
+               |  |
+               |  +--fanDescriptionTable(50)
+               |     |
+               |     +--fanDescriptionEntry(1)
+               |        |  Index: fanIndex
+               |        |
+               |        +-- ---- INTEGER   fanIndex(1)
+               |        +-- -R-- INTEGER   fanSpeed(2)
+               |        +-- -R-- EnumVal   fanPresence(3)
+               |        |        Values: absence(1), presence(2), unknown(3)
+               |        +-- -R-- EnumVal   fanStatus(4)
+               |        |        Values: ok(1), minor(2), major(3), critical(4), absence(5), unknown(6)
+               |        +-- -R-- String    fanLocation(5)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    fanFunction(6)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    fanDevicename(7)
+               |                 Textual Convention: DisplayString
+               |
+               +--fruLedProperty(9)
+               |  |
+               |  +--fruLedDescriptionTable(50)
+               |     |
+               |     +--fruLedDescriptionEntry(1)
+               |        |  Index: fruID, ledName
+               |        |
+               |        +-- ---- INTEGER   fruID(1)
+               |        +-- -R-- String    ledName(2)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    ledColorCapbilities(3)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    ledColorInLocalControlState(4)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    ledColorInOverrideState(5)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    ledColor(6)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- EnumVal   ledMode(7)
+               |        |        Values: localControl(1), override(2), test(3)
+               |        +-- -R-- EnumVal   ledStatus(8)
+               |        |        Values: off(1), on(2), blinking(3)
+               |        +-- -R-- INTEGER   ledLitOnLastTime(9)
+               |        +-- -R-- INTEGER   ledLitOffLastTime(10)
+               |
+               +--componentProperty(10)
+               |  |
+               |  +--componentDescriptionTable(50)
+               |     |
+               |     +--componentDescriptionEntry(1)
+               |        |  Index: componentName
+               |        |
+               |        +-- -R-- String    componentName(1)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -R-- EnumVal   componentType(2)
+               |        |        Values: baseBoard(1), mezzCard(2), amcController(3), mmcController(4), hddBackPlane(5), raidCard(6), riserCard(9), lomCard(13), pcieCard(14)
+               
+               |        +-- -R-- String    componentPCBVersion(3)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -R-- String    componentBoardID(4)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -R-- EnumVal   componentStatus(5)
+               |                 Values: ok(1), minor(2), major(3), critical(4), absence(5), unknown(6)
+               |
+               +--firmwareProperty(11)
+               |  |
+               |  +--firmwareDescriptionTable(50)
+               |     |
+               |     +--firmwareDescriptionEntry(1)
+               |        |  Index: firmwareName
+               |        |
+               |        +-- -R-- String    firmwareName(1)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- EnumVal   firmwareType(2)
+               |        |        Values: iBMC(1), fpga(2), cpld(3), bios(4), uboot(5), lcd(6)
+               |        +-- -R-- String    firmwareReleaseDate(3)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    firmwareVersion(4)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    firmwareLocation(5)
+               |        |        Textual Convention: DisplayString
+               |        +-- ---- INTEGER   fruNumber(6)
+               |        +-- -R-- String    firmwareBoard(7)
+               |                 Textual Convention: DisplayString
+               |
+               +--networkProperty(12)
+               |  |
+               |  +--networkDescriptionTable(50)
+               |     |
+               |     +--networkDescriptionEntry(1)
+               |        |  Index: ethNum
+               |        |
+               |        +-- ---- INTEGER   ethNum(1)
+               |        +-- -RW- IpAddr    ethIPAddress(2)
+               |        +-- -RW- IpAddr    ethNetmask(3)
+               |        +-- -RW- IpAddr    ethDefaultGateway(4)
+               |        +-- -RW- EnumVal   ethIPSource(5)
+               |        |        Values: static(1), dhcp(2)
+               |        +-- -R-- String    ethMACAddress(6)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- EnumVal   ethType(7)
+               |        |        Values: mgmt(1), share(2)
+               |        +-- -RW- EnumVal   ethHostPort(8)
+               |        |        Values: none(1), port1(2), port2(3), port3(4), port4(5)
+               |        +-- -RW- EnumVal   ethEnable(9)
+               |        |        Values: disable(1), enable(2)
+               |        +-- -RW- EnumVal   ethMode(10)
+               |        |        Values: dedicated(1), lomShare(2), adaptive(3), pcieShare(4)
+               |        +-- -RW- String    vlanID(11)
+               |        |        Textual Convention: DisplayString
+               |        +-- -RW- String    ethInfo(12)
+               |        |        Textual Convention: DisplayString
+               |        +-- -RW- EnumVal   ethIPv4Enable(13)
+               |                 Values: disable(1), enable(2)
+               |
+               +--sensorProperty(13)
+               |  |
+               |  +--sensorDescriptionTable(50)
+               |     |
+               |     +--sensorDescriptionEntry(1)
+               |        |  Index: sensorName
+               |        |
+               |        +-- -R-- String    sensorName(1)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    sensorReading(2)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    sensorUpperNonRecoverable(3)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    sensorUpperCritical(4)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    sensorUpperMinor(5)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    sensorLowerNonRecoverable(6)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    sensorLowerCritical(7)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    sensorLowerMinor(8)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    sensorStatus(9)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- INTEGER   sensorType(10)
+               |        +-- -R-- INTEGER   sensorPositiveHysteresis(11)
+               |        +-- -R-- INTEGER   sensorNegativeHysteresis(12)
+               |        +-- -R-- String    sensorPositiveHysteresisString(13)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    sensorNegativeHysteresisString(14)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- EnumVal   sensorUnit(15)
+               |        |        Values: unspecified(0), degrees-c(1), degrees-f(2), degrees-k(3), volts(4), amps(5), watts(6), rpm(18)
+               |        +-- -R-- INTEGER   sensorEventReadingType(16)
+               |
+               +--userProperty(14)
+               |  |
+               |  +--userDescriptionTable(50)
+               |     |
+               |     +--userDescriptionEntry(1)
+               |        |  Index: userID
+               |        |
+               |        +-- ---- INTEGER   userID(1)
+               |        +-- -RW- EnumVal   userEnable(2)
+               |        |        Values: disable(1), enable(2)
+               |        +-- -RW- String    userName(3)
+               |        |        Textual Convention: DisplayString
+               |        +-- -RW- String    userPassword(4)
+               |        |        Textual Convention: DisplayString
+               |        +-- -RW- EnumVal   userGroupID(5)
+               |        |        Values: commonUser(1), operator(2), administrator(3), noAccess(4), customRole1(5), customRole2(6), customRole3(7), customRole4(8)
+               |        +-- -RW- EnumVal   userDelete(6)
+               |        |        Values: delete(1)
+               |        +-- -RW- INTEGER   userInterfaces(7)
+               |        +-- -RW- String    userPublicKeyAdd(8)
+               |        |        Textual Convention: DisplayString
+               |        +-- -RW- String    userPublicKeyDelete(9)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    userPublicKeyHash(10)
+               |                 Textual Convention: DisplayString
+               |
+               +--cpuProperty(15)
+               |  |
+               |  +-- -R-- EnumVal   cpuEntireStatus(1)
+               |  |        Values: ok(1), minor(2), major(3), critical(4), absence(5), unknown(6)
+               |  |
+               |  +--cpuDescriptionTable(50)
+               |     |
+               |     +--cpuDescriptionEntry(1)
+               |        |  Index: cpuIndex
+               |        |
+               |        +-- ---- INTEGER   cpuIndex(1)
+               |        +-- -R-- String    cpuManufacturer(2)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    cpuFamily(3)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    cpuType(4)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    cpuClockRate(5)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- EnumVal   cpuStatus(6)
+               |        |        Values: ok(1), minor(2), major(3), critical(4), absence(5), unknown(6)
+               |        +-- -R-- EnumVal   cpuAvailability(7)
+               |        |        Values: unknown(1), disabled(2), backup(3), active(4)
+               |        +-- -R-- String    cpuLocation(8)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    cpuFunction(9)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    cpuDevicename(10)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    cpuProcessorID(11)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- INTEGER   cpuCoreCount(12)
+               |        +-- -R-- INTEGER   cpuThreadCount(13)
+               |        +-- -R-- String    cpuMemoryTechnology(14)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- INTEGER   cpuL1Cache-K(15)
+               |        +-- -R-- INTEGER   cpuL2Cache-K(16)
+               |        +-- -R-- INTEGER   cpuL3Cache-K(17)
+               |
+               +--memoryProperty(16)
+               |  |
+               |  +-- -R-- EnumVal   memoryEntireStatus(1)
+               |  |        Values: ok(1), minor(2), major(3), critical(4), absence(5), unknown(6)
+               |  |
+               |  +--memoryDescriptionTable(50)
+               |     |
+               |     +--memoryDescriptionEntry(1)
+               |        |  Index: memoryDimmIndex
+               |        |
+               |        +-- ---- INTEGER   memoryDimmIndex(1)
+               |        +-- -R-- String    memoryLogic(2)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    memoryManufacturer(3)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    memorySize(4)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    memoryClockRate(5)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- EnumVal   memoryStatus(6)
+               |        |        Values: ok(1), minor(2), major(3), critical(4), absence(5), unknown(6)
+               |        +-- -R-- EnumVal   memoryAvailability(7)
+               |        |        Values: unknown(1), disabled(2), backup(3), active(4)
+               |        +-- -R-- String    memoryLocation(8)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    memoryFunction(9)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    memoryDevicename(10)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    memoryType(11)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    memorySN(12)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- INTEGER   memoryMinimumVoltage(13)
+               |        +-- -R-- INTEGER   memoryRank(14)
+               |        +-- -R-- INTEGER   memoryBitWidth(15)
+               |        +-- -R-- String    memoryTechnology(16)
+               |                 Textual Convention: DisplayString
+               |
+               +--lomProperty(17)
+               |  |
+               |  +--lomDescriptionTable(50)
+               |     |
+               |     +--lomDescriptionEntry(1)
+               |        |  Index: lomIndex
+               |        |
+               |        +-- ---- INTEGER   lomIndex(1)
+               |        +-- -R-- String    lomMACAddress(2)
+               |                 Textual Convention: DisplayString
+               |
+               +--hardDiskProperty(18)
+               |  |
+               |  +-- -R-- EnumVal   hardDiskEntireStatus(1)
+               |  |        Values: ok(1), minor(2), major(3), critical(4), absence(5), unknown(6)
+               |  |
+               |  +--hardDiskDescriptionTable(50)
+               |     |
+               |     +--hardDiskDescriptionEntry(1)
+               |        |  Index: hardDiskIndex
+               |        |
+               |        +-- ---- INTEGER   hardDiskIndex(1)
+               |        +-- -R-- EnumVal   hardDiskPresence(2)
+               |        |        Values: absence(1), presence(2), unknown(3)
+               
+               |        +-- -R-- EnumVal   hardDiskStatus(3)
+               |        |        Values: ok(1), minor(2), major(3), critical(4), absence(5), unknown(6)
+               
+               |        +-- -R-- String    hardDiskLocation(4)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -R-- String    hardDiskFunction(5)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -R-- String    hardDiskDevicename(6)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -R-- String    hardDiskSerialNumber(7)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -R-- String    hardDiskModelNumber(8)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -R-- String    hardDiskManufacturer(9)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -RW- EnumVal   hardDiskFwState(10)
+               |        |        Values: unconfigured-good(1), unconfigured-bad(2), hot-spare(3), offline(4), failed(5), rebuild(6), online(7), copyback(8), jbod(9), unconfigured-shielded(10), hot-spare-shielded(11), configured-shielded(12), foreign(13), unknown(255)
+               
+               |        +-- -R-- String    hardDiskFwVersion(11)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -R-- EnumVal   hardDiskCapacityInGB(12)
+               |        |        Values: unknown(-1)
+               
+               |        +-- -R-- EnumVal   hardDiskMediaType(13)
+               |        |        Values: hdd(1), ssd(2), ssm(3), unknown(255)
+               
+               |        +-- -R-- EnumVal   hardDiskInterfaceType(14)
+               |        |        Values: undefined(1), parallel-scsi(2), sas(3), sata(4), fiber-channel(5), sata-sas(6), pcie(7), unknown(255)
+               
+               |        +-- -R-- EnumVal   hardDiskPowerState(15)
+               |        |        Values: spun-up(1), spun-down(2), transition(3), unknown(255)
+               
+               |        +-- -R-- EnumVal   hardDiskRebuildProgress(16)
+               |        |        Values: unknown(255)
+               
+               |        +-- -R-- EnumVal   hardDiskPatrolReadStatus(17)
+               |        |        Values: stopped(1), in-progress(2), unknown(255)
+               
+               |        +-- -R-- EnumVal   hardDiskCapableSpeedInMbps(18)
+               |        |        Values: unknown(-1)
+               
+               |        +-- -R-- EnumVal   hardDiskNegotiatedSpeedInMbps(19)
+               |        |        Values: unknown(-1)
+               
+               |        +-- -R-- EnumVal   hardDiskTemperature(20)
+               |        |        Values: unknown(255)
+               
+               |        +-- -R-- String    hardDiskSASAddr1(21)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -R-- String    hardDiskSASAddr2(22)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -R-- EnumVal   hardDiskPrefailState(23)
+               |        |        Values: no(1), yes(2), unknown(255)
+               
+               |        +-- -RW- EnumVal   hardDiskHotSpareState(24)
+               |        |        Values: none(1), global(2), dedicated(3), commissioned(4), emergency(5), unknown(255)
+               
+               |        +-- -R-- EnumVal   hardDiskRemnantWearout(25)
+               |        |        Values: unknown(255)
+               
+               |        +-- -R-- EnumVal   hardDiskMediaErrCount(26)
+               |        |        Values: unknown(-1)
+               
+               |        +-- -R-- EnumVal   hardDiskPrefailErrCount(27)
+               |        |        Values: unknown(-1)
+               
+               |        +-- -R-- EnumVal   hardDiskOtherErrCount(28)
+               |        |        Values: unknown(-1)
+               
+               |        +-- -RW- EnumVal   hardDiskLocationState(29)
+               |        |        Values: unknown(1), off(2), on(3)
+               
+               |        +-- -R-- EnumVal   hardDiskCapacityInMB(30)
+               |                 Values: unknown(-1)
+               |
+               +--fruInfo(19)
+               |  |
+               |  +--fruDescriptionTable(50)
+               |  |  |
+               |  |  +--fruDescriptionEntry(1)
+               |  |     |  Index: fruId
+               |  |     |
+               |  |     +-- ---- INTEGER   fruId(1)
+               |  |     +-- -R-- String    fruBoardManufacturer(2)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -R-- String    fruBoardProductName(3)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -R-- String    fruBoardSerialNumber(4)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -R-- String    fruBoardPartNumber(5)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -R-- String    fruBoardMfgDate(6)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -R-- String    fruBoardFileID(7)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -R-- String    fruProductManufacturer(8)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -R-- String    fruProductName(9)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -R-- String    fruProductSerialNumber(10)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -R-- String    fruProductPartNumber(11)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -R-- String    fruProductVersion(12)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -R-- String    fruProductAssetTag(13)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -R-- String    fruProductFileID(14)
+               |  |              Textual Convention: DisplayString
+               |  |
+               |  +--fruExtendedELabelDescriptionTable(60)
+               |     |
+               |     +--fruExtendedELabelDescriptionEntry(1)
+               |        |  Index: fruid, fruExtendedELabelIndex
+               |        |
+               |        +-- ---- INTEGER   fruid(1)
+               |        +-- -R-- INTEGER   fruExtendedELabelIndex(2)
+               |        +-- -R-- String    fruExtendedELabelInfo(3)
+               |                 Textual Convention: DisplayString
+               |
+               +--powerStatistic(20)
+               |  |
+               |  +-- -R-- String    peakPower(1)
+               |  |        Textual Convention: DisplayString
+               |  +-- -R-- String    peakPowerOccurTime(2)
+               |  |        Textual Convention: DisplayString
+               |  +-- -R-- String    averagePower(3)
+               |  |        Textual Convention: DisplayString
+               |  +-- -R-- String    powerConsumption(4)
+               |  |        Textual Convention: DisplayString
+               |  +-- -R-- String    powerStatisticStartTime(5)
+               |  |        Textual Convention: DisplayString
+               |  +-- -RW- EnumVal   clearPowerStatistic(6)
+               |           Values: clearall(1)
+               |
+               +--powerManagement(23)
+               |  |
+               |  +-- -RW- EnumVal   powerCappingEnable(1)
+               |  |        Values: disable(1), enable(2)
+               |  +-- -RW- INTEGER   powerCappingValue(2)
+               |  +-- -RW- EnumVal   powerCappingFailureAction(3)
+               |           Values: eventlog(1), eventlogAndPowerOff(2)
+               |
+               +--pCIeDeviceProperty(24)
+               |  |
+               |  +-- -R-- EnumVal   pCIeDeviceEntireStatus(1)
+               |  |        Values: ok(1), minor(2), major(3), critical(4), absence(5), unknown(6)
+               |  |
+               |  +--pCIeDeviceDescriptionTable(50)
+               |     |
+               |     +--pCIeDeviceDescriptionEntry(1)
+               |        |  Index: pCIeDeviceIndex
+               |        |
+               |        +-- ---- INTEGER   pCIeDeviceIndex(1)
+               |        +-- -R-- EnumVal   pCIeDevicePresence(2)
+               |        |        Values: absence(1), presence(2), unknown(3)
+               |        +-- -R-- EnumVal   pCIeDeviceStatus(3)
+               |        |        Values: ok(1), minor(2), major(3), critical(4), absence(5), unknown(6)
+               |        +-- -R-- EnumVal   pCIeAvailability(4)
+               |        |        Values: unknown(1), disabled(2), backup(3), active(4)
+               |        +-- -R-- String    pCIeDeviceLocation(5)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    pCIeDeviceFunction(6)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    pCIeDeviceDevicename(7)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- INTEGER   pCIeDeviceVID(8)
+               |        +-- -R-- INTEGER   pCIeDeviceDID(9)
+               |        +-- -R-- String    pCIeDeviceManufacturer(10)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    pCIeDeviceDescription(11)
+               |                 Textual Convention: DisplayString
+               |
+               +--mezzProperty(25)
+               |  |
+               |  +--mezzDescriptionTable(50)
+               |     |
+               |     +--mezzDescriptionEntry(1)
+               |        |  Index: mezzCardIndex
+               |        |
+               |        +-- ---- INTEGER   mezzCardIndex(1)
+               |        +-- -R-- String    mezzCardLocation(2)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    mezzCardFunction(3)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    mezzCardDevicename(4)
+               |                 Textual Convention: DisplayString
+               |
+               +--temperatureProperty(26)
+               |  |
+               |  +--temperatureDescriptionTable(50)
+               |     |
+               |     +--temperatureDescriptionEntry(1)
+               |        |  Index: temperatureIndex
+               |        |
+               |        +-- ---- INTEGER   temperatureIndex(1)
+               |        +-- -R-- String    temperatureObject(2)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- INTEGER   temperatureReading(3)
+               |        +-- -R-- INTEGER   temperatureUpperNonRecoverable(4)
+               |        +-- -R-- INTEGER   temperatureUpperCritical(5)
+               |        +-- -R-- INTEGER   temperatureUpperMinor(6)
+               |        +-- -R-- INTEGER   temperatureLowerNonRecoverable(7)
+               |        +-- -R-- INTEGER   temperatureLowerCritical(8)
+               |        +-- -R-- INTEGER   temperatureLowerMinor(9)
+               |
+               +--networkTimeProtocol(27)
+               |  |
+               |  +-- -R-- EnumVal   ntpSupport(1)
+               |  |        Values: nosupport(1), support(2)
+               |  +-- -RW- EnumVal   ntpEnabled(2)
+               |  |        Values: disable(1), enable(2)
+               |  +-- -RW- String    preferredNTPServer(3)
+               |  |        Textual Convention: DisplayString
+               |  +-- -RW- String    alternateNTPServer(4)
+               |  |        Textual Convention: DisplayString
+               |  +-- -RW- EnumVal   ntpServersource(5)
+               |  |        Values: manual(1), auto(2)
+               |  +-- -RW- EnumVal   bindNTPIPProtocol(6)
+               |  |        Values: ipv4(1), ipv6(2)
+               |  +-- -RW- EnumVal   ntpAuthEnabled(7)
+               |  |        Values: disable(1), enable(2)
+               |  +-- -RW- String    ntpImportGroupkey(8)
+               |  |        Textual Convention: DisplayString
+               |  +-- -R-- EnumVal   ntpGroupkeyState(9)
+               |           Values: notimported(1), imported(2)
+               |
+               +--remoteManagement(28)
+               |  |
+               |  +-- -RW- String    powerOnControl(1)
+               |           Textual Convention: DisplayString
+               |
+               +--snmpMIBConfig(29)
+               |  |
+               |  +-- -RW- EnumVal   snmpV3Algorithm(1)
+               |           Values: mD5andDES(1), mD5andAES(2), sHA1andDES(3), sHA1andAES(4)
+               |
+               +--firmwareUpgrade(30)
+               |  |
+               |  +-- -RW- String    firmwareUpgradeStart(1)
+               |  |        Textual Convention: DisplayString
+               |  +-- -R-- INTEGER   firmwareUpgradeState(2)
+               |  +-- -R-- String    firmwareUpgradeDetailedResults(3)
+               |           Textual Convention: DisplayString
+               |
+               +--certificate(31)
+               |  |
+               |  +--currentCertInfo(1)
+               |  |  |
+               |  |  +-- -R-- String    ownerCountry(1)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -R-- String    ownerState(2)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -R-- String    ownerLocation(3)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -R-- String    ownerOrganization(4)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -R-- String    ownerOrganizationUnit(5)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -R-- String    ownerCommonName(6)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -R-- String    issuerCountry(7)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -R-- String    issuerState(8)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -R-- String    issuerLocation(9)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -R-- String    issuerOrganization(10)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -R-- String    issuerOrganizationUnit(11)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -R-- String    issuerCommonName(12)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -R-- String    certStartTime(13)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -R-- String    certExpiration(14)
+               |  |           Textual Convention: DisplayString
+               |  |
+               |  +--csrRequestInfo(2)
+               |  |  |
+               |  |  +-- -RW- String    reqCountry(1)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -RW- String    reqState(2)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -RW- String    reqLocation(3)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -RW- String    reqOrganization(4)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -RW- String    reqOrganizationUnit(5)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -RW- String    reqCommonName(6)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -RW- EnumVal   csrGenerate(7)
+               |  |  |        Values: csrGenerate(1)
+               |  |  +-- -R-- String    csrExport(8)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -RW- String    certificateImport(9)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -R-- EnumVal   csrStatus(10)
+               |  |           Values: notStartedOrHasSuccessfullyCompleted(1), beingGenerated(2), failsGenerated(3)
+               |  |
+               |  +--customCertInsert(3)
+               |  |  |
+               |  |  +-- -RW- String    customCertificateContent(1)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -RW- String    customCertificatePasswd(2)
+               |  |  |        Textual Convention: DisplayString
+               |  |  +-- -RW- EnumVal   customCertificateImport(3)
+               |  |           Values: customCertificateImport(1)
+               |  |
+               |  +--caCertInfoTable(4)
+               |     |
+               |     +--caCertInfoEntry(1)
+               |        |  Index: certIndex
+               |        |
+               |        +-- -R-- INTEGER   caCertIndex(1)
+               |        +-- -R-- String    caCertType(2)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    caCertOwnerCountry(3)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    caCertOwnerState(4)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    caCertOwnerLocation(5)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    caCertOwnerOrganization(6)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    caCertOwnerOrganizationUnit(7)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    caCertOwnerCommonName(8)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    caCertIssuerCountry(9)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    caCertIssuerState(10)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    caCertIssuerLocation(11)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    caCertIssuerOrganization(12)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    caCertIssuerOrganizationUnit(13)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    caCertIssuerCommonName(14)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    caCertStartTime(15)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    caCertExpiration(16)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    caCertSN(17)
+               |                 Textual Convention: DisplayString
+               |
+               +--sdCardProperty(32)
+               |  |
+               |  +-- -R-- String    sdCardControllerManufacturer(1)
+               |  |        Textual Convention: DisplayString
+               |  +-- -R-- String    sdCardControllerVersion(2)
+               |  |        Textual Convention: DisplayString
+               |  +-- -R-- EnumVal   sdCardEntireStatus(3)
+               |  |        Values: ok(1), minor(2), major(3), critical(4), absence(5), unknown(6)
+               |  |
+               |  +--sdCardDescriptionTable(50)
+               |     |
+               |     +--sdCardDescriptionEntry(1)
+               |        |  Index: sdCardIndex
+               |        |
+               |        +-- ---- INTEGER   sdCardIndex(1)
+               |        +-- -R-- EnumVal   sdCardPresence(2)
+               |        |        Values: absence(1), presence(2), unknown(3)
+               |        +-- -R-- EnumVal   sdCardStatus(3)
+               |        |        Values: ok(1), minor(2), major(3), critical(4), absence(5), unknown(6)
+               |        +-- -R-- INTEGER   sdCardCapacity(4)
+               |        +-- -R-- String    sdCardManufacturer(5)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    sdCardSN(6)
+               |                 Textual Convention: DisplayString
+               |
+               +--securityModuleProperty(33)
+               |  |
+               |  +-- -R-- EnumVal   presence(1)
+               |  |        Values: absence(1), presence(2), unknown(3)
+               |  +-- -R-- String    specificationType(2)
+               |  |        Textual Convention: DisplayString
+               |  +-- -R-- String    specificationVersion(3)
+               |  |        Textual Convention: DisplayString
+               |  +-- -R-- String    manufacturerName(4)
+               |  |        Textual Convention: DisplayString
+               |  +-- -R-- String    manufacturerVersion(5)
+               |           Textual Convention: DisplayString
+               |
+               +--syslog(34)
+               |  |
+               |  +-- -RW- EnumVal   syslogEnable(1)
+               |  |        Values: disable(1), enable(2)
+               |  +-- -RW- EnumVal   syslogIdentity(2)
+               |  |        Values: boardSN(1), productAssetTag(2), hostName(3)
+               |  +-- -RW- EnumVal   syslogSeverity(3)
+               |  |        Values: ok(1), minor(2), major(3), critical(4), none(5)
+               |  +-- -RW- EnumVal   syslogProtocolType(4)
+               |  |        Values: udp(1), tcp(2), tls(3)
+               |  +-- -RW- EnumVal   syslogAuthType(5)
+               |  |        Values: one-way(1), mutual(2)
+               |  +-- -RW- String    syslogImportRootCertificate(6)
+               |  |        Textual Convention: DisplayString
+               |  +-- -RW- String    syslogImportClientCertificate(7)
+               |  |        Textual Convention: DisplayString
+               |  |
+               |  +--syslogInfoDescriptionTable(50)
+               |  |  |
+               |  |  +--syslogInfoDescriptionEntry(1)
+               |  |     |  Index: syslogReceiverIndex
+               |  |     |
+               |  |     +-- ---- INTEGER   syslogReceiverIndex(1)
+               |  |     +-- -RW- EnumVal   syslogReceiverEnable(2)
+               |  |     |        Values: disable(1), enable(2)
+               |  |     +-- -RW- String    syslogReceiverAddress(3)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -RW- INTEGER   syslogReceiverPort(4)
+               |  |     +-- -RW- String    syslogSendLogType(5)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -RW- INTEGER   syslogReceiverTest(6)
+               |  |
+               |  +--syslogCertInfoDescriptionTable(51)
+               |     |
+               |     +--syslogCertInfoDescriptionEntry(1)
+               |        |  Index: syslogCertType
+               |        |
+               |        +-- ---- INTEGER   syslogCertType(1)
+               |        +-- -R-- String    syslogCertIssuedTo(2)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    syslogCertIssuedBy(3)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    syslogCertValidFrom(4)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    syslogCertValidTo(5)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    syslogCertSerialNumber(6)
+               |                 Textual Convention: DisplayString
+               |
+               +--fileTransfer(35)
+               |  |
+               |  +-- -RW- String    fileTransferUrl(1)
+               |  |        Textual Convention: DisplayString
+               |  +-- -R-- INTEGER   fileTransferState(2)
+               |
+               +--raidControllerProperty(36)
+               |  |
+               |  +--raidControllerDescriptionTable(50)
+               |     |
+               |     +--raidControllerDescriptionEntry(1)
+               |        |  Index: raidControllerIndex
+               |        |
+               |        +-- ---- INTEGER   raidControllerIndex(1)
+               |        +-- -R-- String    raidControllerName(2)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -R-- String    raidControllerType(3)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -R-- String    raidControllerComponentName(4)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -R-- EnumVal   raidControllerSupportOOBManagement(5)
+               |        |        Values: no(1), yes(2)
+               
+               |        +-- -R-- EnumVal   raidControllerMode(6)
+               |        |        Values: none-raid(1), raid(2), unknown(255)
+               
+               |        +-- -R-- EnumVal   raidControllerHealthStatus(7)
+               |        |        Values: unknown(65535)
+               
+               |        +-- -R-- String    raidControllerFwVersion(8)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -R-- String    raidControllerNVDataVersion(9)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -R-- EnumVal   raidControllerMemorySizeInMB(10)
+               |        |        Values: unknown(65535)
+               
+               |        +-- -R-- EnumVal   raidControllerDeviceInterface(11)
+               |        |        Values: spi(1), sas-3G(2), sata-1-5G(3), sata-3G(4), sas-6G(5), sas-12G(6), unknown(255)
+               
+               |        +-- -R-- String    raidControllerSASAddress(12)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -R-- EnumVal   raidControllerCachePinned(13)
+               |        |        Values: no(1), yes(2), unknown(255)
+               
+               |        +-- -R-- EnumVal   raidControllerMaintainPDFailHistory(14)
+               |        |        Values: no(1), yes(2), unknown(255)
+               
+               |        +-- -R-- EnumVal   raidControllerDDREccCount(15)
+               |        |        Values: unknown(65535)
+               
+               |        +-- -R-- EnumVal   raidControllerBBUPresence(16)
+               |        |        Values: absent(1), present(2), unknown(255)
+               
+               |        +-- -R-- String    raidControllerBBUType(17)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -R-- INTEGER   raidControllerBBUHealthStatus(18)
+               |        +-- -R-- EnumVal   raidControllerMinStripSupportInBytes(19)
+               |        |        Values: unknown(-1)
+               
+               |        +-- -R-- EnumVal   raidControllerMaxStripSupportInBytes(20)
+               |        |        Values: unknown(-1)
+               
+               |        +-- -RW- EnumVal   raidControllerCopybackEnable(21)
+               |        |        Values: unknown(1), disabled(2), enabled(3)
+               
+               |        +-- -RW- EnumVal   raidControllerSMARTerCopybackEnable(22)
+               |        |        Values: unknown(1), disabled(2), enabled(3)
+               
+               |        +-- -RW- EnumVal   raidControllerJBODEnable(23)
+               |        |        Values: unknown(1), disabled(2), enabled(3)
+               
+               |        +-- -RW- INTEGER   raidControllerRestoreSettings(24)
+               |        +-- -RW- String    raidControllerCreateLD(25)
+               |        |        Textual Convention: DisplayString
+               
+               |        +-- -RW- String    raidControllerAddLD(26)
+               |                 Textual Convention: DisplayString
+               |
+               +--logicalDriveProperty(37)
+               |  |
+               |  +--logicalDriveDescriptionTable(50)
+               |     |
+               |     +--logicalDriveDescriptionEntry(1)
+               |        |  Index: logicalDriveRAIDControllerIndex, logicalDriveIndex
+               |        |
+               |        +-- ---- INTEGER   logicalDriveRAIDControllerIndex(1)
+               |        +-- ---- INTEGER   logicalDriveIndex(2)
+               |        +-- -R-- String    logicalDriveRAIDLevel(3)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- EnumVal   logicalDriveState(4)
+               |        |        Values: offline(1), partial-degraded(2), degraded(3), optimal(4), unknown(255)
+               |        +-- -RW- EnumVal   logicalDriveDefaultReadPolicy(5)
+               |        |        Values: no-read-ahead(1), read-ahead(2), unknown(255)
+               |        +-- -RW- EnumVal   logicalDriveDefaultWritePolicy(6)
+               |        |        Values: write-through(1), write-back-with-bbu(2), write-back(3), unknown(255)
+               |        +-- -RW- EnumVal   logicalDriveDefaultIOPolicy(7)
+               |        |        Values: cached-IO(1), direct-IO(2), unknown(255)
+               |        +-- -R-- EnumVal   logicalDriveCurrentReadPolicy(8)
+               |        |        Values: no-read-ahead(1), read-ahead(2), unknown(255)
+               |        +-- -R-- EnumVal   logicalDriveCurrentWritePolicy(9)
+               |        |        Values: write-through(1), write-back-with-bbu(2), write-back(3), unknown(255)
+               |        +-- -R-- EnumVal   logicalDriveCurrentIOPolicy(10)
+               |        |        Values: cached-IO(1), direct-IO(2), unknown(255)
+               |        +-- -R-- EnumVal   logicalDriveSpanDepth(11)
+               |        |        Values: unknown(255)
+               |        +-- -R-- EnumVal   logicalDriveNumDrivePerSpan(12)
+               |        |        Values: unknown(255)
+               |        +-- -R-- EnumVal   logicalDriveStripeSizeInBytes(13)
+               |        |        Values: unknown(-1)
+               |        +-- -R-- EnumVal   logicalDriveStripeSizeInMB(14)
+               |        |        Values: unknown(-1)
+               |        +-- -R-- EnumVal   logicalDriveSizeInMB(15)
+               |        |        Values: unknown(-1)
+               |        +-- -RW- EnumVal   logicalDriveDiskCachePolicy(16)
+               |        |        Values: disk-default(1), enabled(2), disabled(3), unknown(255)
+               |        +-- -R-- EnumVal   logicalDriveConsistencyCheckStatus(17)
+               |        |        Values: stopped(1), in-progress(2), unknown(255)
+               |        +-- -RW- EnumVal   logicalDriveBootable(18)
+               |        |        Values: no(1), yes(2), unknown(255)
+               |        +-- -RW- String    logicalDriveName(19)
+               |        |        Textual Convention: DisplayString
+               |        +-- -RW- EnumVal   logicalDriveAccessPolicy(20)
+               |        |        Values: unknown(1), blocked(4), hidden(5)
+               |        +-- -R-- EnumVal   logicalDriveInitState(21)
+               |        |        Values: unknown(1), no-init(2), quick-init(3), full-init(4)
+               |        +-- -RW- EnumVal   logicalDriveBGIEnable(22)
+               |        |        Values: unknown(1), disabled(2), enabled(3)
+               |        +-- -R-- EnumVal   logicalDriveIsSSCD(23)
+               |        |        Values: unknown(1), no(2), yes(3)
+               |        +-- -RW- EnumVal   logicalDriveSSCDCachingEnable(24)
+               |        |        Values: unknown(1), disabled(2), enabled(3)
+               |        +-- -R-- String    logicalDriveAssociatedLDs(25)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- String    logicalDriveDedicatedSparePD(26)
+               |        |        Textual Convention: DisplayString
+               |        +-- -RW- INTEGER   logicalDriveDelete(27)
+               |
+               +--diskArrayProperty(39)
+               |  |
+               |  +--diskArrayDescriptionTable(50)
+               |     |
+               |     +--diskArrayDescriptionEntry(1)
+               |        |  Index: diskArrayRAIDControllerIndex, diskArrayIndex
+               |        |
+               |        +-- ---- INTEGER   diskArrayRAIDControllerIndex(1)
+               |        +-- ---- INTEGER   diskArrayIndex(2)
+               |        +-- -R-- EnumVal   diskArrayUsedSpaceInMB(3)
+               |        |        Values: unknown(-1)
+               |        +-- -R-- EnumVal   diskArrayFreeSpaceInMB(4)
+               |        |        Values: unknown(-1)
+               |        +-- -R-- EnumVal   diskArrayLDCount(5)
+               |        |        Values: unknown(255)
+               |        +-- -R-- String    diskArrayLDId(6)
+               |        |        Textual Convention: DisplayString
+               |        +-- -R-- EnumVal   diskArrayPDCount(7)
+               |        |        Values: unknown(255)
+               |        +-- -R-- String    diskArrayPDId(8)
+               |                 Textual Convention: DisplayString
+               |
+               +--remoteControl(40)
+               |  |
+               |  +-- -RW- EnumVal   localKVMState(1)
+               |           Values: disable(1), enable(2)
+               |
+               +--twoFactorAuthentication(41)
+               |  |
+               |  +-- -RW- EnumVal   twoFactorAuthenticationEnable(1)
+               |  |        Values: disable(1), enable(2)
+               |  +-- -RW- EnumVal   twoFactorAuthenticationRevocationCheck(2)
+               |  |        Values: disable(1), enable(2)
+               |  |
+               |  +--rootCertificateDescriptionTable(50)
+               |  |  |
+               |  |  +--rootCertificateDescriptionEntry(1)
+               |  |     |  Index: rootCertificateIndex
+               |  |     |
+               |  |     +-- ---- INTEGER   rootCertificateIndex(1)
+               |  |     +-- -R-- String    rootCertificateIssuedTo(2)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -R-- String    rootCertificateIssuedBy(3)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -R-- String    rootCertificateValidFrom(4)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -R-- String    rootCertificateValidTo(5)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -R-- String    rootCertificateSerialNumber(6)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -RW- String    rootCertificateImport(7)
+               |  |     |        Textual Convention: DisplayString
+               |  |     +-- -RW- INTEGER   rootCertificateDelete(8)
+               |  |
+               |  +--clientCertificateDescriptionTable(51)
+               |     |
+               |     +--clientCertificateDescriptionEntry(1)
+               |        |  Index: clientCertificateIndex
+               |        |
+               |        +-- ---- INTEGER   clientCertificateIndex(1)
+               |        +-- -R-- String    clientCertificateFingerPrint(2)
+               |        |        Textual Convention: DisplayString
+               |        +-- -RW- String    clientCertificateImport(3)
+               |        |        Textual Convention: DisplayString
+               |        +-- -RW- INTEGER   clientCertificateDelete(4)
+               |
+               +--configuration(42)
+               |  |
+               |  +-- -RW- String    exportconfig(1)
+               |  |        Textual Convention: DisplayString
+               |  +-- -RW- String    importconfig(2)
+               |  |        Textual Convention: DisplayString
+               |  +-- -R-- String    configprogress(3)
+               |  |        Textual Convention: DisplayString
+               |  +-- -R-- String    configerrorinfo(4)
+               |           Textual Convention: DisplayString
+               |
+               +--hwTrap(500)
+                  |
+                  +--hwTrapVar(1)
+                  |  |
+                  |  +-- -R-- INTEGER   hwTrapSeq(1)
+                  |  +-- -R-- String    hwTrapSensorName(2)
+                  |  |        Textual Convention: DisplayString
+                  |  +-- -R-- String    hwTrapEvent(3)
+                  |  |        Textual Convention: DisplayString
+                  |  +-- -R-- EnumVal   hwTrapSeverity(4)
+                  |  |        Values: ok(1), minor(2), major(3), critical(4)
+                  |  +-- -R-- String    hwTrapEventCode(5)
+                  |  |        Textual Convention: DisplayString
+                  |  +-- -R-- INTEGER   hwTrapEventData2(6)
+                  |  +-- -R-- INTEGER   hwTrapEventData3(7)
+                  |  +-- -R-- String    hwTrapServerIdentity(8)
+                  |  |        Textual Convention: DisplayString
+                  |  +-- -R-- String    hwTrapLocation(9)
+                  |  |        Textual Convention: DisplayString
+                  |  +-- -R-- String    hwTrapTime(10)
+                  |           Textual Convention: DisplayString
+                  |
+                  +--hwServerTRAPObject(10)
+                  |  |
+                  |  +--hwOEM(1)
+                  |  |  |
+                  |  |  +--hwOEMEvent(1)
+                  |  |
+                  |  +--hwPhysicalSecurity(5)
+                  |  |  |
+                  |  |  +--hwChassisIntrusion(1)
+                  |  |
+                  |  +--hwCPU(7)
+                  |  |  |
+                  |  |  +--hwCPUCATError(1)
+                  |  |  +--hwCPUCATErrorDeassert(2)
+                  |  |  +--hwCPUThermalTrip(17)
+                  |  |  +--hwCPUThermalTripDeassert(18)
+                  |  |  +--hwCPUSelfTestFail(33)
+                  |  |  +--hwCPUSelfTestFailDeassert(34)
+                  |  |  +--hwCPUCfgError(81)
+                  |  |  +--hwCPUCfgErrorDeassert(82)
+                  |  |  +--hwCPUPresence(113)
+                  |  |  +--hwCPUPresenceDeassert(114)
+                  |  |  +--hwCPUOffline(129)
+                  |  |  +--hwCPUOfflineDeassert(130)
+                  |  |  +--hwCPUMCE(177)
+                  |  |  +--hwCPUMCEDeassert(178)
+                  |  |  +--hwVMSELinkFail(193)
+                  |  |  +--hwVMSELinkFailDeassert(194)
+                  |  |
+                  |  +--hwPowerSupply(8)
+                  |  |  |
+                  |  |  +--hwPowerSupplyFault(17)
+                  |  |  +--hwPowerSupplyFaultDeassert(18)
+                  |  |  +--hwPowerSupplyPredictiveFailure(33)
+                  |  |  +--hwPowerSupplyPredictiveFailureDeassert(34)
+                  |  |  +--hwPowerSupplyInputLost(49)
+                  |  |  +--hwPowerSupplyInputLostDeassert(50)
+                  |  |  +--hwPowerSupplyACLost(65)
+                  |  |  +--hwPowerSupplyACLostDeassert(66)
+                  |  |
+                  |  +--hwMemory(12)
+                  |  |  |
+                  |  |  +--hwCorrectableECC(1)
+                  |  |  +--hwCorrectableECCDeassert(2)
+                  |  |  +--hwUncorrectableECC(17)
+                  |  |  +--hwUncorrectableECCDeassert(18)
+                  |  |  +--hwMemoryECCLimitation(81)
+                  |  |  +--hwMemoryECCLimitationDeassert(82)
+                  |  |  +--hwMemoryPresence(97)
+                  |  |  +--hwMemoryPresenceDeassert(98)
+                  |  |  +--hwMemoryCfgError(113)
+                  |  |  +--hwMemoryCfgErrorDeassert(114)
+                  |  |  +--hwMemorySpare(129)
+                  |  |  +--hwMemorySpareDeassert(130)
+                  |  |  +--hwMemoryOvertemp(161)
+                  |  |  +--hwMemoryOvertempDeassert(162)
+                  |  |
+                  |  +--hwStorageDevice(13)
+                  |  |  |
+                  |  |  +--hwStorageDevicePresence(1)
+                  |  |  +--hwStorageDevicePresenceDeassert(2)
+                  |  |  +--hwStorageDeviceFault(17)
+                  |  |  +--hwStorageDeviceFaultDeassert(18)
+                  |  |  +--hwStorageDevicePredictiveFailure(33)
+                  |  |  +--hwStorageDevicePredictiveFailureDeassert(34)
+                  |  |  +--hwRAIDArrayFail(97)
+                  |  |  +--hwRAIDArrayFailDeassert(98)
+                  |  |  +--hwRAIDRebuild(113)
+                  |  |  +--hwRAIDRebuildDeassert(114)
+                  |  |  +--hwRAIDRebuildAborted(129)
+                  |  |  +--hwRAIDRebuildAbortedDeassert(130)
+                  |  |
+                  |  +--hwSysFWProgress(15)
+                  |  |  |
+                  |  |  +--hwSystemFirmwareHang(17)
+                  |  |  +--hwSystemFirmwareHangDeassert(18)
+                  |  |  +--hwSystemNoMemory(257)
+                  |  |  +--hwSystemNoMemoryDeassert(258)
+                  |  |  +--hwPS2USBFault(1793)
+                  |  |  +--hwPS2USBFaultDeassert(1794)
+                  |  |  +--hwVideoControllerFault(2305)
+                  |  |  +--hwVideoControllerFaultDeassert(2306)
+                  |  |  +--hwCPUVoltageMismatch(3073)
+                  |  |  +--hwCPUVoltageMismatchDeassert(3074)
+                  |  |
+                  |  +--hwSELStatus(16)
+                  |  |  |
+                  |  |  +--hwSELClearedAssert(33)
+                  |  |  +--hwSELAlmostFullAssert(81)
+                  |  |  +--hwSELAlmostFullDeassert(82)
+                  |  |
+                  |  +--hwSysEvent(18)
+                  |  |  |
+                  |  |  +--hwSystemError(33)
+                  |  |  +--hwSystemErrorDeassert(34)
+                  |  |  +--hwSysEventInstance(65)
+                  |  |
+                  |  +--hwPowerButton(20)
+                  |  |  |
+                  |  |  +--hwPowerButtonPressed(1)
+                  |  |
+                  |  +--hwCable(27)
+                  |  |  |
+                  |  |  +--hwCableStatus(17)
+                  |  |  +--hwCableStatusDeassert(18)
+                  |  |
+                  |  +--hwSysRestart(29)
+                  |  |  |
+                  |  |  +--hwSysRestartUnknown(113)
+                  |  |  +--hwSysRestartChassisCtrl(369)
+                  |  |  +--hwSysRestartPowerButton(881)
+                  |  |  +--hwSysRestartWatchdogCtrl(1137)
+                  |  |  +--hwSysRestartAlwaysRestore(1649)
+                  |  |  +--hwSysRestartRestorePrevState(1905)
+                  |  |
+                  |  +--hwBootError(30)
+                  |  |  |
+                  |  |  +--hwNoBootableMedia(1)
+                  |  |  +--hwNoBootableMediaDeassert(2)
+                  |  |  +--hwNoBootableDisk(17)
+                  |  |  +--hwNoBootableDiskDeassert(18)
+                  |  |  +--hwPXENotFound(33)
+                  |  |  +--hwPXENotFoundDeassert(34)
+                  |  |  +--hwInvalidBootSector(49)
+                  |  |  +--hwInvalidBootSectorDeassert(50)
+                  |  |
+                  |  +--hwDeviceFault(33)
+                  |  |  |
+                  |  |  +--hwHardwareAddrFault(1)
+                  |  |  +--hwHardwareAddrFaultDeassert(2)
+                  |  |  +--hwLossBmaHeartBeat(17)
+                  |  |  +--hwLossBmaHeartBeatDeassert(18)
+                  |  |  +--hwDeviceInstall(33)
+                  |  |  +--hwDeviceInstallDeassert(34)
+                  |  |  +--hwEthLinkDown(129)
+                  |  |  +--hwEthLinkDownDeassert(130)
+                  |  |  +--hwMemBrdMigrate(145)
+                  |  |  +--hwMemBrdMigrateDeassert(146)
+                  |  |  +--hwPCIEStatus(257)
+                  |  |  +--hwPCIEStatusDeassert(258)
+                  |  |  +--hwFanFault(2049)
+                  |  |  +--hwFanFaultDeassert(2050)
+                  |  |  +--hwPCIeFault(2305)
+                  |  |  +--hwPCIeFaultDeassert(2306)
+                  |  |
+                  |  +--hwACPIStatus(34)
+                  |  |  |
+                  |  |  +--hwACPIStatusS0(1)
+                  |  |  +--hwACPIStatusS4S5(97)
+                  |  |
+                  |  +--hwWatchDog(35)
+                  |  |  |
+                  |  |  +--hwWatchDogOverflow(1)
+                  |  |  +--hwWatchDogOverflowDeassert(2)
+                  |  |  +--hwWatchDogReset(17)
+                  |  |  +--hwWatchDogResetDeassert(18)
+                  |  |  +--hwWatchDogPowerDown(33)
+                  |  |  +--hwWatchDogPowerDownDeassert(34)
+                  |  |  +--hwWatchDogPowerCycle(49)
+                  |  |  +--hwWatchDogPowerCycleDeassert(50)
+                  |  |
+                  |  +--hwLANHeartBeat(39)
+                  |  |  |
+                  |  |  +--hwLANHeartLost(1)
+                  |  |  +--hwLANHeartLostDeassert(2)
+                  |  |
+                  |  +--hwMngmntHealth(40)
+                  |  |  |
+                  |  |  +--hwSensorAccessibleFail(1)
+                  |  |  +--hwSensorAccessibleFailDeassert(2)
+                  |  |  +--hwControllerAccessibleFail(17)
+                  |  |  +--hwControllerAccessibleFailDeassert(18)
+                  |  |  +--hwFruFail(81)
+                  |  |  +--hwFruFailDeassert(82)
+                  |  |
+                  |  +--hwBattery(41)
+                  |  |  |
+                  |  |  +--hwRTCBatterylow(1)
+                  |  |  +--hwRTCBatterylowDeassert(2)
+                  |  |  +--hwRAIDCardBBUFailed(17)
+                  |  |  +--hwRAIDCardBBUFailedDeassert(18)
+                  |  |  +--hwRAIDCardBBUPresence(33)
+                  |  |  +--hwRAIDCardBBUPresenceDeassert(34)
+                  |  |
+                  |  +--hwVerChange(43)
+                  |  |  |
+                  |  |  +--hwHardwareChange(1)
+                  |  |  +--hwFirmwareChange(17)
+                  |  |
+                  |  +--hwHotSwap(240)
+                  |  |  |
+                  |  |  +--hwHotSwaptoM0(1)
+                  |  |  +--hwHotSwaptoM1(17)
+                  |  |  +--hwHotSwaptoM2(33)
+                  |  |  +--hwHotSwaptoM3(49)
+                  |  |  +--hwHotSwaptoM4(65)
+                  |  |  +--hwHotSwaptoM5(81)
+                  |  |  +--hwHotSwaptoM6(97)
+                  |  |  +--hwHotSwaptoM7(113)
+                  |  |
+                  |  +--hwIPMBLink(241)
+                  |  |  |
+                  |  |  +--hwIPMBLinkStateAll(1)
+                  |  |  +--hwIPMBLinkStateAllDeassert(2)
+                  |  |  +--hwIPMBLinkStateB(17)
+                  |  |  +--hwIPMBLinkStateBDeassert(18)
+                  |  |  +--hwIPMBLinkStateA(33)
+                  |  |  +--hwIPMBLinkStateADeassert(34)
+                  |  |  +--hwIPMBLinkStateNoFault(49)
+                  |  |
+                  |  +--hwTrapTest(256)
+                  |  |  |
+                  |  |  +--hwTrapTestInstance(1)
+                  |  |
+                  |  +--hwOvertemperature(257)
+                  |  |  |
+                  |  |  +--hwOvertempMinor(113)
+                  |  |  +--hwOvertempMinorDeassert(114)
+                  |  |  +--hwOvertempMajor(145)
+                  |  |  +--hwOvertempMajorDeassert(146)
+                  |  |  +--hwOvertempCritical(177)
+                  |  |  +--hwOvertempCriticalDeassert(178)
+                  |  |
+                  |  +--hwVoltage(258)
+                  |  |  |
+                  |  |  +--hwLowerVoltageMajor(33)
+                  |  |  +--hwLowerVoltageMajorDeassert(34)
+                  |  |  +--hwOverVoltageMajor(145)
+                  |  |  +--hwOverVoltageMajorDeassert(146)
+                  |  |  +--hwOverVoltageCritcal(177)
+                  |  |  +--hwOverVoltageCritcalDeassert(178)
+                  |  |
+                  |  +--hwCPUProchot(775)
+                  |  |  |
+                  |  |  +--hwCPUProchotState(17)
+                  |  |  +--hwCPUProchotStateDeassert(18)
+                  |  |
+                  |  +--hwNoSDCard(781)
+                  |  |  |
+                  |  |  +--hwNoSDCardAssert(17)
+                  |  |  +--hwNoSDCardDeassert(18)
+                  |  |
+                  |  +--hwBoardMismatch(786)
+                  |  |  |
+                  |  |  +--hwBoardMismatchAssert(17)
+                  |  |  +--hwBoardMismatchDeassert(18)
+                  |  |
+                  |  +--hwUIDButton(788)
+                  |  |  |
+                  |  |  +--hwUIDButtonPressed(17)
+                  |  |
+                  |  +--hwAddInCard(791)
+                  |  |  |
+                  |  |  +--hwPCIeError(17)
+                  |  |  +--hwPCIeErrorDeassert(18)
+                  |  |
+                  |  +--hwChipSet(793)
+                  |  |  |
+                  |  |  +--hwPCHError(17)
+                  |  |  +--hwPCHErrorDeassert(18)
+                  |  |
+                  |  +--hwPowerCapping(1042)
+                  |  |  |
+                  |  |  +--hwPowerCapFail(17)
+                  |  |  +--hwPowerCapFailDeassert(18)
+                  |  |
+                  |  +--hwCardFault(1047)
+                  |  |  |
+                  |  |  +--hwCardStatusFault(17)
+                  |  |  +--hwCardStatusFaultDeassert(18)
+                  |  |
+                  |  +--hwLCD(1052)
+                  |  |  |
+                  |  |  +--hwLCDFault(17)
+                  |  |  +--hwLCDFaultDeassert(18)
+                  |  |
+                  |  +--hwCPUUsage(1287)
+                  |  |  |
+                  |  |  +--hwCPUUsageHigh(17)
+                  |  |  +--hwCPUUsageHighDeassert(18)
+                  |  |
+                  |  +--hwMemoryUsage(1292)
+                  |  |  |
+                  |  |  +--hwMemoryUsageHigh(17)
+                  |  |  +--hwMemoryUsageHighDeassert(18)
+                  |  |
+                  |  +--hwDiskUsage(1293)
+                  |  |  |
+                  |  |  +--hwDiskUsageHigh(17)
+                  |  |  +--hwDiskUsageHighDeassert(18)
+                  |  |
+                  |  +--hwLog(1808)
+                  |  |  |
+                  |  |  +--hwLogFull(129)
+                  |  |  +--hwLogFullDeassert(130)
+                  |  |
+                  |  +--hwSysNotice(1810)
+                  |  |  |
+                  |  |  +--hwSystemWarmReset(129)
+                  |  |  +--hwSystemWarmResetDeassert(130)
+                  |  |
+                  |  +--hwModule(1813)
+                  |  |  |
+                  |  |  +--hwModuleCritical(33)
+                  |  |
+                  |  +--hwPSPresenceStatus(2057)
+                  |  |  |
+                  |  |  +--hwPSPresence(17)
+                  |  |  +--hwPSPresenceDeassert(18)
+                  |  |
+                  |  +--hwFanPresenceStatus(2058)
+                  |  |  |
+                  |  |  +--hwFanAbsent(1)
+                  |  |  +--hwFanAbsentDeassert(2)
+                  |  |
+                  |  +--hwCardPresenceStatus(2071)
+                  |  |  |
+                  |  |  +--hwCardPresence(17)
+                  |  |  +--hwCardPresenceDeassert(18)
+                  |  |
+                  |  +--hwLCDPresenceStatus(2076)
+                  |  |  |
+                  |  |  +--hwLCDAbsent(1)
+                  |  |  +--hwLCDAbsentDeassert(2)
+                  |  |
+                  |  +--hwCPUCore(2311)
+                  |  |  |
+                  |  |  +--hwCPUCoreIsolation(1)
+                  |  |  +--hwCPUCoreIsolationDeassert(2)
+                  |  |
+                  |  +--hwBMCBootUp(2326)
+                  |  |  |
+                  |  |  +--hwBMCBootUpAssert(17)
+                  |  |
+                  |  +--hwMemoryRiser(2583)
+                  |  |  |
+                  |  |  +--hwMemoryRiserOnline(49)
+                  |  |  +--hwMemoryRiserOnlineDeassert(50)
+                  |  |  +--hwMemoryRiserOffline(65)
+                  |  |  +--hwMemoryRiserOfflineDeassert(66)
+                  |  |  +--hwMemoryRiserInstallError(129)
+                  |  |  +--hwMemoryRiserInstallErrorDeassert(130)
+                  |  |
+                  |  +--hwPSRedundancy(2824)
+                  |     |
+                  |     +--hwPSRedundancyLost(17)
+                  |     +--hwPSRedundancyLostDeassert(18)
+                  |
+                  +--hwServerTRAPObjectV2(11)
+                     |
+                     +--hwMemoryEvent(2)
+                     |  |
+                     |  +--hwMemoryConfigError(37)
+                     |  +--hwMemoryConfigErrorDeassert(38)
+                     |  +--hwMemoryInitializationError(39)
+                     |  +--hwMemoryInitializationErrorDeassert(40)
+                     |
+                     +--hwPCIeCardEvent(9)
+                     |  |
+                     |  +--hwPCIeCardUncorrectableErr(1)
+                     |  +--hwPCIeCardUncorrectableErrDeassert(2)
+                     |  +--hwPCIeCardOverTemp(3)
+                     |  +--hwPCIeCardOverTempDeassert(4)
+                     |  +--hwPCIeCardAccessTempFailure(5)
+                     |  +--hwPCIeCardAccessTempFailureDeassert(6)
+                     |  +--hwPCIeCardAccessFRULableFailure(7)
+                     |  +--hwPCIeCardAccessFRULableFailureDeassert(8)
+                     |  +--hwPCIeCardDIMMOverTemp(9)
+                     |  +--hwPCIeCardDIMMOverTempDeassert(10)
+                     |  +--hwPCIeCardOverTempMajor(11)
+                     |  +--hwPCIeCardOverTempMajorDeassert(12)
+                     |  +--hwPCIeCardCPUOverTempMinor(13)
+                     |  +--hwPCIeCardCPUOverTempMinorDeassert(14)
+                     |  +--hwPCIeCardCPUOverTempMajor(15)
+                     |  +--hwPCIeCardCPUOverTempMajorDeassert(16)
+                     |  +--hwPCIeCardBattLowerVoltMinor(17)
+                     |  +--hwPCIeCardBattLowerVoltMinorDeassert(18)
+                     |  +--hwPCIeCardLowerVoltMajor(19)
+                     |  +--hwPCIeCardLowerVoltMajorDeassert(20)
+                     |  +--hwPCIeCardOverVoltMajor(21)
+                     |  +--hwPCIeCardOverVoltMajorDeassert(22)
+                     |  +--hwPCIeCardAccessVoltFailure(23)
+                     |  +--hwPCIeCardAccessVoltFailureDeassert(24)
+                     |  +--hwPCIeCardBootEvent(25)
+                     |  +--hwPCIeCardBootEventDeassert(26)
+                     |  +--hwPCIeCardHardwareFailure(27)
+                     |  +--hwPCIeCardHardwareFailureDeassert(28)
+                     |  +--hwPCIeCardBootDiskAbsent(29)
+                     |  +--hwPCIeCardBootDiskAbsentDeassert(30)
+                     |  +--hwPCIeCardDIMMFailure(31)
+                     |  +--hwPCIeCardDIMMFailureDeassert(32)
+                     |  +--hwPCIeCardFWInitFailure(33)
+                     |  +--hwPCIeCardFWInitFailureDeassert(34)
+                     |  +--hwPCIeCardCPUInitFailure(35)
+                     |  +--hwPCIeCardCPUInitFailureDeassert(36)
+                     |  +--hwPCIeCardWatchDogTimeout(37)
+                     |  +--hwPCIeCardWatchDogTimeoutDeassert(38)
+                     |  +--hwPCIeCardBBULowerVoltage(57)
+                     |  +--hwPCIeCardBBULowerVoltageDeassert(58)
+                     |  +--hwPCIeCardBBUFault(59)
+                     |  +--hwPCIeCardBBUFaultDeassert(60)
+                     |  +--hwPCIeCardBBUNotPresent(61)
+                     |  +--hwPCIeCardBBUPresent(63)
+                     |
+                     +--hwMemoryBoardEvent(15)
+                     |  |
+                     |  +--hwMemoryBoardSMI2TainingError(5)
+                     |  +--hwMemoryBoardSMI2TainingErrorDeassert(6)
+                     |
+                     +--hwMainboardEvent(17)
+                     |  |
+                     |  +--hwMainboardSMI2TainingError(155)
+                     |  +--hwMainboardSMI2TainingErrorDeassert(156)
+                     |
+                     +--hwCPUMemoryEvent(45)
+                        |
+                        +--hwCPUMemoryConfigError(75)
+                        +--hwCPUMemoryConfigErrorDeassert(76)
+                        +--hwCPUMRCFatalError(77)
+                        +--hwCPUMRCFatalErrorDeassert(78)
+                        +--hwNoAvailableMemoryError(79)
+                        +--hwNoAvailableMemoryErrorDeassert(80)

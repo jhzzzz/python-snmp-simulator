@@ -1,0 +1,1252 @@
+{
+  "imports": {
+    "class": "imports", 
+    "SNMPv2-CONF": [
+      "NOTIFICATION-GROUP", 
+      "MODULE-COMPLIANCE", 
+      "OBJECT-GROUP"
+    ], 
+    "SNMPv2-SMI": [
+      "Integer32", 
+      "OBJECT-TYPE", 
+      "NOTIFICATION-TYPE", 
+      "MibIdentifier", 
+      "IpAddress", 
+      "TimeTicks", 
+      "Counter64", 
+      "Unsigned32", 
+      "enterprises", 
+      "MODULE-IDENTITY", 
+      "Gauge32", 
+      "iso", 
+      "OBJECT-IDENTITY", 
+      "Bits", 
+      "Counter32"
+    ], 
+    "SNMPv2-TC": [
+      "DisplayString", 
+      "TEXTUAL-CONVENTION"
+    ]
+  }, 
+  "hwPDUSmm": {
+    "name": "hwPDUSmm", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1", 
+    "class": "moduleidentity", 
+    "lastupdated": "190607070000Z", 
+    "organization": "OSCA Soft Group", 
+    "contactinfo": "Huawei Technologies Co.", 
+    "description": "The MIB module for stub module hwBlade."
+  }, 
+  "huawei": {
+    "name": "huawei", 
+    "oid": "1.3.6.1.4.1.2011", 
+    "class": "objectidentity"
+  }, 
+  "products": {
+    "name": "products", 
+    "oid": "1.3.6.1.4.1.2011.2", 
+    "class": "objectidentity"
+  }, 
+  "hwOSTA": {
+    "name": "hwOSTA", 
+    "oid": "1.3.6.1.4.1.2011.2.82", 
+    "class": "objectidentity"
+  }, 
+  "hwUSP": {
+    "name": "hwUSP", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1", 
+    "class": "objectidentity"
+  }, 
+  "hwPDU": {
+    "name": "hwPDU", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101", 
+    "class": "objectidentity"
+  }, 
+  "hwPDUNode": {
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.1", 
+    "name": "hwPDUNode", 
+    "class": "objectgroup", 
+    "objects": [
+      {
+        "object": "hwSoftVersion", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduLinkStatus", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduVersion", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwBuzzerSw", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwMonitorStatus", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwLoadProc", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwLoadFile", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwBase2Status", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwBase1Status", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduLoadProc", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduLoadFile", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwAllLoadFile", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwAllLoadProc", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduResetReason", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduConfigData", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduWarningMask", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduAnalog", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduWarningStatus", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduLinkStatusNode", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduLinkStatusIndex", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduVersionIndex", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduVersioNode", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduConfigDataIndex", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduConfigDataNode", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduWarningMaskIndex", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduWarningMaskNode", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduAnalogIndex", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduAnalogNode", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwBuzzerSwIndex", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwBuzzerSwNode", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduResetReasoIndex", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduResetReasonNode", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduWarningStatusIndex", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduWarningStatusNode", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwSmmVer", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPdumReset", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwBladeVerIndex", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwBladeVerNode", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwAllLoadMulProc", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPdumDebug", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "bladeverion", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "versionindex", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPdumTrapIpAddr", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwSmmInfo", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduAlmsNode", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduAlmsIndex", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduEidNode", 
+        "module": "HW-PDUM-MIB"
+      }, 
+      {
+        "object": "hwPduEidIndex", 
+        "module": "HW-PDUM-MIB"
+      }
+    ], 
+    "status": "deprecated", 
+    "description": "Description."
+  }, 
+  "hwPDUM": {
+    "name": "hwPDUM", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2", 
+    "class": "objectidentity"
+  }, 
+  "hwSoftVersion": {
+    "name": "hwSoftVersion", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.1", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "deprecated", 
+    "description": "Pdu Manager SoftWare Version"
+  }, 
+  "hwPduLinkStatus": {
+    "name": "hwPduLinkStatus", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.2", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "deprecated", 
+    "description": "Serial Link Status: SMM - PDU"
+  }, 
+  "hwPduVersion": {
+    "name": "hwPduVersion", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.3", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "deprecated", 
+    "description": "The version of PDU"
+  }, 
+  "hwPduConfigData": {
+    "name": "hwPduConfigData", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.4", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-write", 
+    "status": "deprecated", 
+    "description": "Get/Set config data of pdu 16-channel voltage value: Upperlimit Lowerlimit 4-channel external switch sensor: L/H Board temperature sensor: Upperlimit Lowerlimit "
+  }, 
+  "hwPduWarningMask": {
+    "name": "hwPduWarningMask", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.5", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-write", 
+    "status": "deprecated", 
+    "description": "Get/Set PDU alarm enable 16-channel input voltage alarm: ON/OFF 16-channel output switch sensor: ON/OFF 4-channel external switch sensor: ON/OFF Two device fault: ON/OFF A board temperature sensor: ON/OFF For example: ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON ON If input less than 39 alarm mask, the system configuration of the front part of the mask, the latter part remains unchanged. If input more than 39 alarm mask, the portion of the greater than 39 does not handle."
+  }, 
+  "hwPduAnalog": {
+    "name": "hwPduAnalog", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.6", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "deprecated", 
+    "description": "Get analog value of PDU. It contain 16-channel voltage value and a board temperature sensor value"
+  }, 
+  "hwBuzzerSw": {
+    "name": "hwBuzzerSw", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.7", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type"
+    }, 
+    "default": {
+      "default": {
+        "value": "on", 
+        "format": "string"
+      }
+    }, 
+    "maxaccess": "read-write", 
+    "status": "deprecated", 
+    "description": "Get/Set buzzer switch: ON/OFF"
+  }, 
+  "hwPduResetReason": {
+    "name": "hwPduResetReason", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.8", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "deprecated", 
+    "description": "Description. 00HPowered On 01HManual Reset 02HCommand Reset 03HCommunication Failed 04HHardware Fault "
+  }, 
+  "hwPduWarningStatus": {
+    "name": "hwPduWarningStatus", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.9", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "deprecated", 
+    "description": "Get warning status of PDU. 16-channel input voltage alarm 16-channel output switch sensor 4-channel external switch sensor Two device fault A board temperature sensor"
+  }, 
+  "hwPduLoadFile": {
+    "name": "hwPduLoadFile", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.10", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-write", 
+    "status": "current", 
+    "description": "Upgrade program of PDU. the operation of writing ,the input of parameter is filename of program and the name of PDU. for example: IT11PAMU_V100_LOAD.bin PDU2 Before the upgrade, you must transfer program to /tmp which is in SMM. the operation of reading, when return value is busy, the program is being upgraded. when return value is OK the program to complete the upgrade, "
+  }, 
+  "hwPduLoadProc": {
+    "name": "hwPduLoadProc", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.11", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 63
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Program progress of the upgrade."
+  }, 
+  "hwPduReset": {
+    "name": "hwPduReset", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.12", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-write", 
+    "status": "current", 
+    "description": "Reset pdu or get pdum status. the operation of writing ,we will reset PDU, the input of parameter is index of PDU. 0: PDU0 1: PDU1 2: PDU2 3: PDU3 the operation of reading, when return value is RUNNING, the program of pdum.out is running. when return value is ABSENT, the program of pdum.out is stopping, After reset PDU, You must wait one minute for PDUM initialization is complete. "
+  }, 
+  "hwPdumTrapIpAddr": {
+    "name": "hwPdumTrapIpAddr", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.13", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "The IP address of the machine that will receive SNMP traps from a smmLocation. "
+  }, 
+  "hwPduLinkStatusTable": {
+    "name": "hwPduLinkStatusTable", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.102", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "status": "current", 
+    "description": "A table containing the list of Serial Link Status."
+  }, 
+  "hwPduLinkStatusEntry": {
+    "name": "hwPduLinkStatusEntry", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.102.1", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "indices": [
+      {
+        "module": "HW-PDUM-MIB", 
+        "object": "hwPduLinkStatusIndex"
+      }
+    ], 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduLinkStatusIndex": {
+    "name": "hwPduLinkStatusIndex", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.102.1.1", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "Integer32", 
+      "class": "type", 
+      "constraints": {
+        "range": [
+          {
+            "min": 1, 
+            "max": 4
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduLinkStatusNode": {
+    "name": "hwPduLinkStatusNode", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.102.1.2", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduVersionTable": {
+    "name": "hwPduVersionTable", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.103", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "status": "current", 
+    "description": "A table containing the list of PDU Version."
+  }, 
+  "hwPduVersionEntry": {
+    "name": "hwPduVersionEntry", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.103.1", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "indices": [
+      {
+        "module": "HW-PDUM-MIB", 
+        "object": "hwPduVersionIndex"
+      }
+    ], 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduVersionIndex": {
+    "name": "hwPduVersionIndex", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.103.1.1", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "Integer32", 
+      "class": "type", 
+      "constraints": {
+        "range": [
+          {
+            "min": 1, 
+            "max": 4
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduVersioNode": {
+    "name": "hwPduVersioNode", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.103.1.2", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduConfigDataTable": {
+    "name": "hwPduConfigDataTable", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.104", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "status": "current", 
+    "description": "A table containing the list of config data."
+  }, 
+  "hwPduConfigDataEntry": {
+    "name": "hwPduConfigDataEntry", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.104.1", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "indices": [
+      {
+        "module": "HW-PDUM-MIB", 
+        "object": "hwPduConfigDataIndex"
+      }
+    ], 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduConfigDataIndex": {
+    "name": "hwPduConfigDataIndex", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.104.1.1", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "Integer32", 
+      "class": "type", 
+      "constraints": {
+        "range": [
+          {
+            "min": 1, 
+            "max": 4
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduConfigDataNode": {
+    "name": "hwPduConfigDataNode", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.104.1.2", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-write", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduWarningMaskTable": {
+    "name": "hwPduWarningMaskTable", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.105", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "status": "current", 
+    "description": "A table containing the list of alarm enable."
+  }, 
+  "hwPduWarningMaskEntry": {
+    "name": "hwPduWarningMaskEntry", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.105.1", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "indices": [
+      {
+        "module": "HW-PDUM-MIB", 
+        "object": "hwPduWarningMaskIndex"
+      }
+    ], 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduWarningMaskIndex": {
+    "name": "hwPduWarningMaskIndex", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.105.1.1", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "Integer32", 
+      "class": "type", 
+      "constraints": {
+        "range": [
+          {
+            "min": 1, 
+            "max": 4
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduWarningMaskNode": {
+    "name": "hwPduWarningMaskNode", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.105.1.2", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-write", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduAnalogTable": {
+    "name": "hwPduAnalogTable", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.106", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "status": "current", 
+    "description": "A table containing the list of PDU analog value."
+  }, 
+  "hwPduAnalogEntry": {
+    "name": "hwPduAnalogEntry", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.106.1", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "indices": [
+      {
+        "module": "HW-PDUM-MIB", 
+        "object": "hwPduAnalogIndex"
+      }
+    ], 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduAnalogIndex": {
+    "name": "hwPduAnalogIndex", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.106.1.1", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "Integer32", 
+      "class": "type", 
+      "constraints": {
+        "range": [
+          {
+            "min": 1, 
+            "max": 4
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduAnalogNode": {
+    "name": "hwPduAnalogNode", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.106.1.2", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwBuzzerSwTable": {
+    "name": "hwBuzzerSwTable", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.107", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "status": "current", 
+    "description": "A table containing the list of buzzer switch."
+  }, 
+  "hwBuzzerSwEntry": {
+    "name": "hwBuzzerSwEntry", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.107.1", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "indices": [
+      {
+        "module": "HW-PDUM-MIB", 
+        "object": "hwBuzzerSwIndex"
+      }
+    ], 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwBuzzerSwIndex": {
+    "name": "hwBuzzerSwIndex", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.107.1.1", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "Integer32", 
+      "class": "type", 
+      "constraints": {
+        "range": [
+          {
+            "min": 1, 
+            "max": 4
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwBuzzerSwNode": {
+    "name": "hwBuzzerSwNode", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.107.1.2", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type"
+    }, 
+    "maxaccess": "read-write", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduResetReasonTable": {
+    "name": "hwPduResetReasonTable", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.108", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "status": "current", 
+    "description": "A table containing the list of pdu reset reason."
+  }, 
+  "hwPduResetReasonEntry": {
+    "name": "hwPduResetReasonEntry", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.108.1", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "indices": [
+      {
+        "module": "HW-PDUM-MIB", 
+        "object": "hwPduResetReasoIndex"
+      }
+    ], 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduResetReasoIndex": {
+    "name": "hwPduResetReasoIndex", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.108.1.1", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "Integer32", 
+      "class": "type", 
+      "constraints": {
+        "range": [
+          {
+            "min": 1, 
+            "max": 4
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduResetReasonNode": {
+    "name": "hwPduResetReasonNode", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.108.1.2", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduWarningStatusTable": {
+    "name": "hwPduWarningStatusTable", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.109", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "status": "current", 
+    "description": "A table containing the list of warning status."
+  }, 
+  "hwPduWarningStatusEntry": {
+    "name": "hwPduWarningStatusEntry", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.109.1", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "indices": [
+      {
+        "module": "HW-PDUM-MIB", 
+        "object": "hwPduWarningStatusIndex"
+      }
+    ], 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduWarningStatusIndex": {
+    "name": "hwPduWarningStatusIndex", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.109.1.1", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "Integer32", 
+      "class": "type", 
+      "constraints": {
+        "range": [
+          {
+            "min": 1, 
+            "max": 4
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduWarningStatusNode": {
+    "name": "hwPduWarningStatusNode", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.109.1.2", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduEidTable": {
+    "name": "hwPduEidTable", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.111", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "status": "current", 
+    "description": "A table containing the list of electronic label."
+  }, 
+  "hwPduEidEntry": {
+    "name": "hwPduEidEntry", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.111.1", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "indices": [
+      {
+        "module": "HW-PDUM-MIB", 
+        "object": "hwPduEidIndex"
+      }
+    ], 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduEidIndex": {
+    "name": "hwPduEidIndex", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.111.1.1", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "Integer32", 
+      "class": "type", 
+      "constraints": {
+        "range": [
+          {
+            "min": 1, 
+            "max": 4
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduEidNode": {
+    "name": "hwPduEidNode", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.111.1.2", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 2048
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduE2pEidNode": {
+    "name": "hwPduE2pEidNode", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.111.1.3", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 2048
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduLogNode": {
+    "name": "hwPduLogNode", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.111.1.4", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 2048
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduAlmsTable": {
+    "name": "hwPduAlmsTable", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.112", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "status": "current", 
+    "description": "A table containing the list of warning which not include the status is ok."
+  }, 
+  "hwPduAlmsEntry": {
+    "name": "hwPduAlmsEntry", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.112.1", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "indices": [
+      {
+        "module": "HW-PDUM-MIB", 
+        "object": "hwPduAnalogIndex"
+      }
+    ], 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduAlmsIndex": {
+    "name": "hwPduAlmsIndex", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.112.1.1", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "Integer32", 
+      "class": "type", 
+      "constraints": {
+        "range": [
+          {
+            "min": 1, 
+            "max": 4
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduAlmsNode": {
+    "name": "hwPduAlmsNode", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.112.1.2", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduTimeTable": {
+    "name": "hwPduTimeTable", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.113", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "status": "current", 
+    "description": "A table containing the list of warning which not include the status is ok."
+  }, 
+  "hwPduTimeEntry": {
+    "name": "hwPduTimeEntry", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.113.1", 
+    "class": "objecttype", 
+    "maxaccess": "not-accessible", 
+    "indices": [
+      {
+        "module": "HW-PDUM-MIB", 
+        "object": "hwPduAnalogIndex"
+      }
+    ], 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduTimeIndex": {
+    "name": "hwPduTimeIndex", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.113.1.1", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "Integer32", 
+      "class": "type", 
+      "constraints": {
+        "range": [
+          {
+            "min": 1, 
+            "max": 4
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "hwPduTimeNode": {
+    "name": "hwPduTimeNode", 
+    "oid": "1.3.6.1.4.1.2011.2.82.1.101.1.2.113.1.2", 
+    "class": "objecttype", 
+    "syntax": {
+      "type": "OCTET STRING", 
+      "class": "type", 
+      "constraints": {
+        "size": [
+          {
+            "min": 0, 
+            "max": 512
+          }
+        ]
+      }
+    }, 
+    "maxaccess": "read-only", 
+    "status": "current", 
+    "description": "Description."
+  }, 
+  "meta": {
+    "comments": [
+      "ASN.1 source file:///usr/share/snmp/mibs/HW-PDUM-MIB.txt", 
+      "Produced by pysmi-0.1.1 at Mon Apr  3 21:35:44 2017", 
+      "On host localhost.localdomain platform Linux version 3.10.0-123.el7.x86_64 by user root", 
+      "Using Python version 2.7.5 (default, Nov  6 2016, 00:28:07) "
+    ], 
+    "module": "HW-PDUM-MIB"
+  }
+}
